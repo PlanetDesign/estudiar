@@ -1,0 +1,24 @@
+PROCEDURE TO REPLACE THE VOCAB_ENTRIES TABLE WITH A NEW SPECIFICATION
+
+	1 CREATE THE NEW TABLE, THIS TIME WITH INTEGER PRIMARY KEY AUTOINCREMENT
+
+CREATE TABLE Vocab_entries_new(
+  entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  domain TEXT NOT NULL,
+  segment TEXT NOT NULL,
+  front TEXT NOT NULL,
+  back TEXT NOT NULL
+  );
+
+
+	2 COPY DATA FROM OLD TO NEW
+
+INSERT INTO Vocab_entries_new
+   SELECT * 
+   FROM Vocab_entries;
+
+	3.	Verify, verify, verify
+	4.	Rename the old table to a temporary name. USE DBEAVER
+	5.	Rename the new table to the previously used name.   USE DBEAVER
+	6.	Recreate triggers, stored procedures, indexes, foreign keys.  N/A
+	7.	Much later, DROP the old table with temporary name

@@ -1,0 +1,21 @@
+NEW METHOD, NO KEY NEEDED
+INSERT INTO Vocab_entries (domain, segment, front, back)
+VALUES ('Spanish','Family','stepmother / stepfather', 'la madrastra / el padrastro');
+
+
+
+OLD METHOD - INCLUDED KEY
+INSERT INTO Vocab_entries
+VALUES 
+(1, 'Spanish', 'greetings', 'goodbye', 'adiós'),
+(2, 'Spanish', 'greetings', 'see you soon', 'hasta luego'),
+(3, 'Spanish', 'greetings', 'good morning', 'buenos días'),
+(4, 'Spanish', 'greetings', 'good afternoon', 'buenos tardes'),
+(5, 'Spanish', 'greetings', 'good night', 'buenas noches'),
+(6, 'Spanish', 'numbers', '20', 'veinte'),
+(7, 'Spanish', 'numbers', '22', 'veintidós'),
+(8, 'Spanish', 'numbers', '21', 'veintiuno'),
+(9, 'Physics', 'basic', 'Energy used to push or pull an object', 'Force'),
+(10, 'Physics', 'basic', 'The force of gravity on an object', 'Weight'),
+(11, 'Physics', 'basic', 'The amount of matter in an object', 'Mass'),
+(12, 'Physics', 'basic', 'A force between two objects', 'Gravity');

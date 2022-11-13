@@ -1,0 +1,42 @@
+rob@MacBook-Pro SQL % 
+rob@MacBook-Pro SQL % touch vocab.sqlite
+rob@MacBook-Pro SQL % ls -l
+total 280
+-rw-r--r--@ 1 rob  staff   9273 Oct 11 10:12 SpanishVocab.xlsx
+-rw-r--r--@ 1 rob  staff  69632 Oct 17 20:32 TYSQL.sqlite
+drwx------@ 6 rob  staff    192 Oct 10 08:46 TYSQL5_SQLite-2
+-rw-r--r--  1 rob  staff      0 Oct 17 20:42 vocab.sqlite
+
+rob@MacBook-Pro SQL % sqlite3
+SQLite version 3.37.0 2021-12-09 01:34:53
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open vocab.sqlite
+sqlite> .schema
+
+sqlite> CREATE TABLE Vocab_entries(
+   ...> entry_id NUMERIC PRIMARY KEY,
+   ...> domain TEXT NOT NULL,
+   ...> segment TEXT NOT NULL,
+   ...> front TEXT NOT NULL,
+   ...> back TEXT NOT NULL
+   ...> );
+
+sqlite> .schema
+
+CREATE TABLE Vocab_entries(
+entry_id NUMERIC PRIMARY KEY,
+domain TEXT NOT NULL,
+segment TEXT NOT NULL,
+front TEXT NOT NULL,
+back TEXT NOT NULL
+);
+
+sqlite> INSERT INTO Vocab_entries VALUES (1, 'Spanish', 'Greetings', 'goodbye', 'adios');
+sqlite> INSERT INTO Vocab_entries VALUES (2, 'Spanish', 'Greetings', 'see you soon', 'hasta luego');
+
+sqlite> SELECT * FROM Vocab_entries;
+1|Spanish|Greetings|goodbye|adios
+2|Spanish|Greetings|see you soon|hasta luego
+sqlite> 

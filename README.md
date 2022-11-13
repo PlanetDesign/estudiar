@@ -1,5 +1,5 @@
 # estudiar
-Project to build a vocabulary study tool and learn Swift
+Project to build a vocabulary study tool and learn SQL, Python and Swift
 
 Estudiar
 
@@ -12,6 +12,6 @@ Exceptions:
 Backlog is in Jira at https://planetdesign.atlassian.net/jira/software/projects/ES/boards/1
 
 Folders:
-design - wireframes, etc.
+design - wireframes, etc. Includes xmind where most of the concepts are still stored.
 assets - graphics, databases/table, etc.
-code - Swift code, so software
+code - Python & Swift code, so software
